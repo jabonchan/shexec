@@ -24,6 +24,13 @@ I've always felt Deno's way of dealing with child processes was awful, very awkw
 The **shexec** project follows Deno's official formatting standards. All source code is automatically formatted using the `deno fmt` command, with settings defined in the `deno.json` configuration file.
 
 ## Documentation 📚
+
+## Installing Dependencies 🌎
+Since **shexec** uses `npm` dependencies, before using it in your projects you need to run
+```bash
+deno install "jsr:@jabonchan/shexec"
+```
+
 ## Importing 📥
 
 You can import **shexec**'s multiple exports in your project like this:

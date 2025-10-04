@@ -1,0 +1,23 @@
+{
+    "name": "@jabonchan/shexec",
+    "version": "0.0.1",
+    "license": "MIT",
+    "exports": "./mod.ts",
+    "imports": {
+        "iconv-lite": "npm:iconv-lite@0.7.0",
+        "@std/expect": "jsr:@std/expect@1.0.17"
+    },
+    "test": {
+        "include": [
+            "./tests/spawning.ts",
+            "./tests/parsing.ts"
+        ]
+    },
+    "fmt": {
+        "exclude": [
+            "./README.md"
+        ],
+        "indentWidth": 4,
+        "useTabs": false
+    }
+}

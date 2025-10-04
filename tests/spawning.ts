@@ -17,6 +17,14 @@ Deno.test("spawning-processes", async (t) => {
         expect(output.signal).toBe(null);
     });
 
+    await t.step("windows encoding", async () => {
+        if (unix) return;
+
+        const output = await $`cmd /c echo òéà`;
+
+        expect(output.decoded.stdout.trim()).toBe("òéà");
+    });
+
     await t.step("exec inherit", async () => {
         const proc = unix
             ? $.spawnInherit`echo Hello, ${"world"}!`
